@@ -3,8 +3,11 @@ const express = require("express");
 const app = express();
 const port = 8080;
 
+app.search("view engine", "ejs");
+
 app.get("/", (request, response) => {
-    response.send("I am alive!");
+    let result = { name :"pero" }
+    response.render("index", result );
 });
 
 
